@@ -15,7 +15,7 @@ module.exports = function(router) {
       var resObj = {};
 
       if (error) {
-        res.json({ success: false, message: "Invalid url provided" });
+        res.json({ success: false, message: "Invalid url provided. Need full URL, starting with http." });
         return;
       }
 
