@@ -4,10 +4,7 @@ const middlewares = require("../middlewares/middlewares");
 
 module.exports = function(router) {
   // Caching the request/response data for 5 minutes
-  router.get("/scrapPost", middlewares.cacheMiddleware(300), function(
-    req,
-    res
-  ) {
+  router.get("/scrap", middlewares.cacheMiddleware(300), function( req, res ) {
     let requestOptions = {
       rejectUnauthorized: false, //To proceed even if there is an issue with SSL cert:
       url: req.query.url,
